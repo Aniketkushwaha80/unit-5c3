@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+  margin: auto;
+}
+.table, th, td {
+  margin: auto;
+  border: 0.5px solid;
+  
+  width: 80%;
+}
+.table{
+  margin-top: 5%;
+}
+.controls{
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin-top: 5%;
+  margin: auto;
+ 
+}
+.search{
+  width: 30%;
+
+  border-radius: 2px;
+  
+  margin-top: 1%;
+  margin-bottom: 1%;
+  height: 30px;
+}
+.addstudent{
+  margin: auto;
+  
+ display: grid;
+ width: 50%;
+ grid-template-columns: repeat(1,1fr);
+}
+.submit{
+ 
+  width: 100px;
+  margin: auto;
+}
+input{
+  margin-left: 10%;
+ 
+}

@@ -1,0 +1,71 @@
+
+import { useState } from 'react'
+import axios from "axios"
+export const AddStudent = () => {
+
+
+  const [formData ,setformData]=useState([])
+
+ 
+
+
+
+const handle=(e)=>{
+
+const {id, value}=e.target
+    setformData({
+        ...formData,[id]:value,
+    })
+}
+
+const create={
+  frist_name: formData,
+}
+
+
+const Handleubmit=()=>{
+ 
+axios.post("http://localhost:8080/students", create).then(function(res){
+  console.log("Added")
+})
+
+
+}
+
+
+fetch("http://localhost:8080/students",{
+  method:"POST",
+  headers:{
+      "content-type":"application/json",
+  },
+  body:JSON.stringify(create),
+
+}).then(()=>{
+  
+})
+
+
+}
+
+
+  return (
+    
+      <div>
+        
+        <input onChange={(e)=>{setformData(e.target.value)}}
+          type="text"
+          name="first_name"
+          className="first_name"
+          placeholder="enter first name"
+        />
+
+        <button onClick={Handleubmit}>dvbdbvd</button>
+
+    </div>
+     
+     
+
+     
+  
+  );
+};
